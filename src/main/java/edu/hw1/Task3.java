@@ -3,7 +3,7 @@ package edu.hw1;
 import java.util.Arrays;
 import java.util.OptionalInt;
 
-public class Task3 {
+public final class Task3 {
 
     private Task3() {
     }

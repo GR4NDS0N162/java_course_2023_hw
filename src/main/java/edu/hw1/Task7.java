@@ -2,7 +2,7 @@ package edu.hw1;
 
 import java.util.BitSet;
 
-public class Task7 {
+public final class Task7 {
 
     private static final int BINARY_BASE = 2;
 
