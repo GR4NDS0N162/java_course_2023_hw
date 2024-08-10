@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class Task6Test {
+
     @Test
     @DisplayName("test1")
     void test1() {
