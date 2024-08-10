@@ -23,8 +23,8 @@ public class Task8 {
             for (int j = 0; j < board[i].length; j++) {
                 if (board[i][j] == 1) {
                     for (var offset : OFFSETS) {
-                        var x = j + offset[0];
-                        var y = i + offset[1];
+                        int x = j + offset[0];
+                        int y = i + offset[1];
 
                         if (y < 0 || y >= board.length || x < 0 || x >= board[y].length) {
                             continue;

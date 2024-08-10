@@ -1,7 +1,6 @@
 package edu.hw1;
 
 import java.util.Arrays;
-import org.jetbrains.annotations.NotNull;
 
 public class Task6 {
 
@@ -18,14 +17,14 @@ public class Task6 {
         }
 
         int[] digits = new int[NUMBER_DIGIT];
-        for (int i = 0, n = number; i < NUMBER_DIGIT; i++) {
+        for (int i = 0, n = number; i < digits.length; i++) {
             digits[i] = n % DECIMAL_BASE;
             n /= DECIMAL_BASE;
         }
 
         Arrays.sort(digits);
 
-        var a = convertToInt(digits);
+        int a = convertToInt(digits);
 
         for (int i = 0; i < digits.length / 2; i++) {
             var tmp = digits[i];
@@ -33,12 +32,12 @@ public class Task6 {
             digits[digits.length - 1 - i] = tmp;
         }
 
-        var b = convertToInt(digits);
+        int b = convertToInt(digits);
 
         return 1 + countK(b - a);
     }
 
-    private static int convertToInt(int @NotNull [] digits) {
+    private static int convertToInt(int[] digits) {
         int number = 0;
         for (var digit : digits) {
             number *= DECIMAL_BASE;

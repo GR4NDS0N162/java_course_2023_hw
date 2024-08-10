@@ -1,6 +1,7 @@
 package edu.hw1;
 
 import java.util.Arrays;
+import java.util.OptionalInt;
 
 public class Task3 {
 
@@ -12,12 +13,12 @@ public class Task3 {
     }
 
     private static int min(int[] array) {
-        var min = Arrays.stream(array).min();
+        OptionalInt min = Arrays.stream(array).min();
         return min.isPresent() ? min.getAsInt() : Integer.MAX_VALUE;
     }
 
     private static int max(int[] array) {
-        var max = Arrays.stream(array).max();
+        OptionalInt max = Arrays.stream(array).max();
         return max.isPresent() ? max.getAsInt() : Integer.MIN_VALUE;
     }
 }
