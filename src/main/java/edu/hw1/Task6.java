@@ -2,7 +2,7 @@ package edu.hw1;
 
 import java.util.Arrays;
 
-public class Task6 {
+public final class Task6 {
 
     public static final int KAPREKAR = 6174;
     public static final int DECIMAL_BASE = 10;
