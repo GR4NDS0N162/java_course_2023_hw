@@ -2,7 +2,7 @@ package edu.hw1;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Task8 {
+public final class Task8 {
 
     private static final int[][] OFFSETS = {
         {2, 1},
