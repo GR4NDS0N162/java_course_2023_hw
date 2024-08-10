@@ -3,6 +3,7 @@ package edu.hw1;
 import org.jetbrains.annotations.NotNull;
 
 public class Task1 {
+
     private static final int SECONDS_IN_MINUTE = 60;
 
     private Task1() {

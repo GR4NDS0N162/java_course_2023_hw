@@ -3,6 +3,7 @@ package edu.hw1;
 import org.jetbrains.annotations.NotNull;
 
 public class Task5 {
+
     private Task5() {
     }
 

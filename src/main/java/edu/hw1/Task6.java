@@ -4,6 +4,7 @@ import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 
 public class Task6 {
+
     public static final int KAPREKAR = 6174;
     public static final int DECIMAL_BASE = 10;
     public static final int NUMBER_DIGIT = 4;

@@ -3,6 +3,7 @@ package edu.hw1;
 import org.jetbrains.annotations.NotNull;
 
 public class Task8 {
+
     private static final int[][] OFFSETS = {
         {2, 1},
         {2, -1},
