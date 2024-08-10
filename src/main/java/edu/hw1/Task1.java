@@ -1,14 +1,13 @@
 package edu.hw1;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Task1 {
+
     private static final int SECONDS_IN_MINUTE = 60;
 
     private Task1() {
     }
 
-    public static int minutesToSeconds(@NotNull String duration) {
+    public static int minutesToSeconds(String duration) {
         int invalidValue = -1;
 
         if (!duration.matches("[0-9]+:[0-5][0-9]")) {

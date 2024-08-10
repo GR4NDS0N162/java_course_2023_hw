@@ -3,6 +3,7 @@ package edu.hw1;
 import java.util.BitSet;
 
 public class Task7 {
+
     private static final int BINARY_BASE = 2;
 
     private Task7() {
@@ -21,11 +22,11 @@ public class Task7 {
 
         int result = 0;
 
-        var length = bitSet.length();
-        var finalShiftToLeft = shiftToLeft % length;
+        int length = bitSet.length();
+        int finalShiftToLeft = (shiftToLeft % length + length) % length;
         for (int i = 0; i < length; i++) {
             if (bitSet.get(i)) {
-                var newIndex = (i + finalShiftToLeft + length) % length;
+                int newIndex = (i + finalShiftToLeft) % length;
                 result |= 0x1 << newIndex;
             }
         }
