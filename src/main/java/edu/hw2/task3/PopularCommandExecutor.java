@@ -3,6 +3,7 @@ package edu.hw2.task3;
 import edu.hw2.task3.connection.Connection;
 import edu.hw2.task3.connection_manager.ConnectionManager;
 import edu.hw2.task3.connection_manager.FaultyConnectionManager;
+import edu.hw2.task3.exception.ConnectionException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
