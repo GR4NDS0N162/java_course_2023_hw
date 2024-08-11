@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 public class Task1Test {
 
     @Test
-    @DisplayName("test1")
+    @DisplayName("1 + ((2 + 4) * (-1)) ^ 2")
     void test1() {
         // given
         var two = new Constant(2);
@@ -24,5 +24,24 @@ public class Task1Test {
 
         // then
         assertThat(result).isEqualTo(37);
+    }
+
+    @Test
+    @DisplayName("((4 + (-7)) * (-6)) ^ (2 + 4)")
+    void test2() {
+        // given
+        var two = new Constant(2);
+        var four = new Constant(4);
+        var negSeven = new Negate(7);
+        var add = new Addition(four, negSeven);
+        var mult = new Multiplication(add, -6);
+        var sumTwoFour = new Addition(two, four);
+        var res = new Exponent(mult, sumTwoFour);
+
+        // when
+        var result = res.evaluate();
+
+        // then
+        assertThat(result).isEqualTo(34_012_224);
     }
 }
