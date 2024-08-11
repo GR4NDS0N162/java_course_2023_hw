@@ -10,10 +10,12 @@ public class FaultyConnection implements Connection {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final Random RANDOM = new Random();
 
+    private static final double ERROR_PROBABILITY = 0.8;
+
     @Override
     public void execute(String command) throws ConnectionException {
         LOGGER.info(command);
-        if (RANDOM.nextInt(2) % 2 == 0) {
+        if (RANDOM.nextDouble() < ERROR_PROBABILITY) {
             throw new ConnectionException();
         }
     }
