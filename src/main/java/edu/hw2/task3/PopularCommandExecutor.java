@@ -2,6 +2,7 @@ package edu.hw2.task3;
 
 import edu.hw2.task3.connection.Connection;
 import edu.hw2.task3.connection_manager.ConnectionManager;
+import edu.hw2.task3.connection_manager.FaultyConnectionManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,6 +16,15 @@ public class PopularCommandExecutor {
     public PopularCommandExecutor(ConnectionManager manager, int maxAttempts) {
         this.manager = manager;
         this.maxAttempts = maxAttempts;
+    }
+
+    public static void main(String[] args) {
+        var commandExecutor = new PopularCommandExecutor(new FaultyConnectionManager(), 5);
+        try {
+            commandExecutor.updatePackages();
+        } catch (ConnectionException e) {
+            LOGGER.error("Не удалось выполнить команду спустя все попытки");
+        }
     }
 
     public void updatePackages() {
