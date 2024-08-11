@@ -1,4 +1,7 @@
-package edu.hw2.task3;
+package edu.hw2.task3.connection_manager;
+
+import edu.hw2.task3.connection.Connection;
+import edu.hw2.task3.connection.FaultyConnection;
 
 public class FaultyConnectionManager implements ConnectionManager {
 

@@ -1,5 +1,6 @@
-package edu.hw2.task3;
+package edu.hw2.task3.connection;
 
+import edu.hw2.task3.ConnectionException;
 import java.util.Random;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,7 +19,7 @@ public class FaultyConnection implements Connection {
     }
 
     @Override
-    public void close() throws Exception {
+    public void close() {
         LOGGER.info("Закрываем нестабильное соединение");
     }
 }
