@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public class Task2Test {
 
     @Test
-    @DisplayName("test1")
+    @DisplayName("Прямоугольник 2 на 4")
     void test1() {
         // given
         Rectangle rectangle = new Rectangle(2, 4);
@@ -22,7 +22,7 @@ public class Task2Test {
     }
 
     @Test
-    @DisplayName("test2")
+    @DisplayName("Прямоугольник 6 на 5")
     void test2() {
         // given
         Rectangle rectangle = new Rectangle(5, 5);
@@ -36,7 +36,7 @@ public class Task2Test {
     }
 
     @Test
-    @DisplayName("test3")
+    @DisplayName("Прямоугольник 5 на 8")
     void test3() {
         // given
         Rectangle rectangle = new Rectangle(5, 5);
@@ -50,7 +50,7 @@ public class Task2Test {
     }
 
     @Test
-    @DisplayName("test4")
+    @DisplayName("Прямоугольник 6 на 8")
     void test4() {
         // given
         Rectangle rectangle = new Rectangle(5, 5);
@@ -65,7 +65,7 @@ public class Task2Test {
     }
 
     @Test
-    @DisplayName("test5")
+    @DisplayName("Квадрат 5")
     void test5() {
         // given
         Rectangle square = new Square(5);
@@ -78,7 +78,7 @@ public class Task2Test {
     }
 
     @Test
-    @DisplayName("test6")
+    @DisplayName("Квадрат 20")
     void test6() {
         // given
         Rectangle square = new Square(5);
@@ -92,7 +92,7 @@ public class Task2Test {
     }
 
     @Test
-    @DisplayName("test7")
+    @DisplayName("Квадрат 50")
     void test7() {
         // given
         Rectangle square = new Square(5);
@@ -106,7 +106,7 @@ public class Task2Test {
     }
 
     @Test
-    @DisplayName("test8")
+    @DisplayName("Квадрат 2")
     void test8() {
         // given
         Rectangle square = new Square(5);
