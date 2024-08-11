@@ -1,15 +1,12 @@
 package edu.hw2;
 
-import edu.hw2.task1.Expr.Addition;
-import edu.hw2.task1.Expr.Constant;
-import edu.hw2.task1.Expr.Exponent;
-import edu.hw2.task1.Expr.Multiplication;
-import edu.hw2.task1.Expr.Negate;
+import edu.hw2.task1.Expr.*;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class Task1Test {
+
     @Test
     @DisplayName("test1")
     void test1() {
