@@ -1,6 +1,9 @@
 package edu.hw2.task3;
 
+import edu.hw2.task3.connection.Connection;
 import edu.hw2.task3.connection_manager.ConnectionManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class PopularCommandExecutor {
 
@@ -22,7 +25,24 @@ public class PopularCommandExecutor {
         tryExecute("apt autoremove -y");
     }
 
-    void tryExecute(String command) {
-        // TODO: Реализовать метод tryExecute(String command)
+    void tryExecute(String command) throws ConnectionException {
+        try (Connection connection = manager.getConnection()) {
+            for (int i = 1; i <= maxAttempts; i++) {
+                try {
+                    connection.execute(command);
+                    LOGGER.info("Команда `%s` успешно выполнена с %d-й попытки".formatted(command, i));
+                    break;
+                } catch (ConnectionException e) {
+                    LOGGER.error("Команда `%s` не выполнена с %d-й попытки".formatted(command, i));
+                    if (i == maxAttempts) {
+                        throw new ConnectionException(e);
+                    }
+                }
+            }
+        } catch (ConnectionException e) {
+            throw e;
+        } catch (Exception e) {
+            LOGGER.info("Не удалось закрыть соединение");
+        }
     }
 }
