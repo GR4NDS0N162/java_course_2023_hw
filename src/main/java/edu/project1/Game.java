@@ -19,7 +19,9 @@ public class Game {
 
     public Game(@NotNull String wordToGuess, int maxAttempts, @NotNull String surrenderCommand) {
         if (wordToGuess.length() < MIN_WORD_LENGTH) {
-            throw new IllegalArgumentException("Слово должно содержать как минимум %d буквы.".formatted(MIN_WORD_LENGTH));
+            throw new IllegalArgumentException(
+                "Слово должно содержать как минимум %d буквы.".formatted(MIN_WORD_LENGTH)
+            );
         }
         if (surrenderCommand.isEmpty()) {
             throw new IllegalArgumentException("Команда для сдачи должна быть не пустой.");

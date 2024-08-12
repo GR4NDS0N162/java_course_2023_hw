@@ -2,8 +2,12 @@ package edu.project1;
 
 import java.util.List;
 
-public class Main {
+public final class Main {
 
+    private Main() {
+    }
+
+    @SuppressWarnings("MagicNumber")
     public static void main(String[] args) {
         List<String> dictionary = List.of("java", "python", "hangman", "code");
         WordDictionary wordDictionary = new WordDictionary(dictionary);
